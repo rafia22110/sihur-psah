@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Be+Vietnam+Pro:wght@400;500;700&family=Assistant:wght@400;700;800&display=swap');
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", "Assistant", sans-serif;
+  --font-body: "Be Vietnam Pro", "Assistant", sans-serif;
+  
+  --color-surface: #FDFCF0;
+  --color-primary: #f97316; /* orange-500 */
+  --color-primary-dark: #ea580c; /* orange-600 */
+  --color-secondary: #3b82f6; /* blue-500 */
+  --color-secondary-dark: #2563eb; /* blue-600 */
+  --color-tertiary: #22c55e; /* green-500 */
+}
+
+@layer utilities {
+  .block-shadow-orange {
+    box-shadow: 0 8px 0 0 #ea580c;
+  }
+  .block-shadow-blue {
+    box-shadow: 0 8px 0 0 #2563eb;
+  }
+  .block-shadow-slate {
+    box-shadow: 0 8px 0 0 #475569;
+  }
+  .active-push:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 0 rgba(0,0,0,0.2);
+  }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+body {
+  @apply bg-surface font-body text-slate-800 min-h-screen overflow-x-hidden;
+  direction: rtl;
+}
+
+.dir-rtl {
+  direction: rtl;
+}
